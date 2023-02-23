@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import Layout from '../layout/layout';
+import Layout from '../components/layout';
 import Link from 'next/link';
 import styles from '../styles/Form.module.css';
 import Image from 'next/image';
@@ -89,8 +89,8 @@ export default function Register() {
         {/* bottom */}
         <p className='text-center text-gray-400 '>
           Have an account?{' '}
-          <Link href={'/login'}>
-            <a className='text-blue-700'>Sign In</a>
+          <Link href={'/login'} className='text-blue-700'>
+            Sign In
           </Link>
         </p>
       </section>
