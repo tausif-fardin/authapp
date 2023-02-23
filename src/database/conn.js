@@ -6,12 +6,11 @@ const connectMongo = async () => {
     const { connection } = await mongoose.connect(process.env.MONGO_URL);
 
     if (connection.readyState == 1) {
-      console.log('connected');
+      //console.log('connected');
       return Promise.resolve(true);
     }
   } catch (error) {
-    console.log('not connected');
-
+    //console.log('not connected');
     return Promise.reject(error);
   }
 };
