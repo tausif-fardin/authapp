@@ -7,6 +7,7 @@ import { HiAtSymbol, HiFingerPrint } from 'react-icons/hi';
 import { useState } from 'react';
 import { signIn, signOut } from 'next-auth/react';
 import { useFormik } from 'formik';
+import login_validate from './../lib/validate';
 
 export default function Login() {
   const [show, setShow] = useState(false);
@@ -15,6 +16,7 @@ export default function Login() {
       email: '',
       password: '',
     },
+    validate: login_validate,
     onSubmit,
   });
 
